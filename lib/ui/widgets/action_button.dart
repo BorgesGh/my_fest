@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_fest/ui/style/pallete.dart';
 
+// ignore: must_be_immutable
 class ActionButton extends StatelessWidget {
   String content;
   Function()? onPressed;

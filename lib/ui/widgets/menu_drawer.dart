@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_fest/ui/style/fonts.dart';
 import 'package:my_fest/ui/style/pallete.dart';
 
 class MenuDrawer extends StatelessWidget {

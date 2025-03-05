@@ -19,7 +19,7 @@ class PartyTile extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
-        color: Pallete.primaryColor[600],
+        color: Pallete.primaryColor[300],
         borderRadius: BorderRadius.circular(10),
         boxShadow: const [
           BoxShadow(

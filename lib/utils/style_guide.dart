@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_fest/ui/style/pallete.dart';
 import 'package:my_fest/ui/widgets/action_button.dart';
+import 'package:my_fest/ui/widgets/beatifoul_dialog.dart';
+import 'package:my_fest/ui/widgets/custom_dialog.dart';
 import 'package:my_fest/ui/widgets/menu_drawer.dart';
 import 'package:my_fest/ui/widgets/party_tile.dart';
 import 'package:my_fest/ui/widgets/product_tile.dart';
@@ -37,36 +39,24 @@ class _StyleGuideState extends State<StyleGuide> {
               unidadeDeMedida: "Unidade",
               quantidadePorPessoa: "5",
             ),
-            ProductTile(
-              nomeProduto: "Brigadeiro",
-              unidadeDeMedida: "Unidade",
-              quantidadePorPessoa: "3",
-            ),
-            ProductTile(
-              nomeProduto: "Pastel",
-              unidadeDeMedida: "Unidade",
-              quantidadePorPessoa: "2",
-            ),
-            ProductTile(
-              nomeProduto: "Refrigerante",
-              unidadeDeMedida: "Litro",
-              quantidadePorPessoa: "0.5",
-            ),
-            ProductTile(
-              nomeProduto: "Pipoca",
-              unidadeDeMedida: "Pacote",
-              quantidadePorPessoa: "1",
-            ),
-            ProductTile(
-              nomeProduto: "Sanduíche",
-              unidadeDeMedida: "Unidade",
-              quantidadePorPessoa: "2",
-            ),
-            ProductTile(
-              nomeProduto: "Suco",
-              unidadeDeMedida: "Litro",
-              quantidadePorPessoa: "0.3",
-            ),
+            TextButton(
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (_) => CustomDialog(
+                            title: "Deseja exluir?",
+                            content: "O Conteúdo será excluído permanentemente",
+                            onConfirmPressed: () {},
+                            textFirstButton: "Confirmar",
+                          ));
+                },
+                child: Text("Abrir Dialog")),
+            TextButton(
+                onPressed: () {
+                  BeatifoulDialog.bottomDialog(
+                      context: context, title: "Titulo");
+                },
+                child: Text("Abrir Dialog")),
           ],
         ),
       ),

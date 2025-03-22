@@ -1,4 +1,4 @@
-import 'package:my_fest/data/repositories/local/database_helper.dart';
+import 'package:my_fest/data/services/local/database_helper.dart';
 import 'package:my_fest/utils/object.dart';
 import 'package:sqflite/sqflite.dart';
 

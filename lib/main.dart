@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:my_fest/data/repositories/local/database_helper.dart';
+import 'package:my_fest/data/services/local/database_helper.dart';
 import 'package:my_fest/router.dart';
 import 'package:my_fest/ui/style/pallete.dart';
 

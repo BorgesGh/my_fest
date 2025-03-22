@@ -1,4 +1,4 @@
-import 'package:my_fest/data/repositories/local/dao/generic_dao.dart';
+import 'package:my_fest/data/services/local/dao/generic_dao.dart';
 import 'package:my_fest/model/party.dart';
 
 class PartyDao extends GenericDao<Party> {

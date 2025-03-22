@@ -38,6 +38,9 @@ class CustomDialog extends StatelessWidget {
           style: ElevatedButton.styleFrom(
             backgroundColor: Pallete.primaryColor[300],
             foregroundColor: Colors.white,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(1),
+            ),
           ),
           onPressed: onConfirmPressed,
           child: Text(
@@ -57,6 +60,9 @@ class CustomDialog extends StatelessWidget {
           style: ElevatedButton.styleFrom(
             backgroundColor: Pallete.grayTonalities[500],
             foregroundColor: Colors.white,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(1),
+            ),
           ),
           child: const Row(
             mainAxisSize: MainAxisSize.min,

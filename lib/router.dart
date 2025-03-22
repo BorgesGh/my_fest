@@ -8,7 +8,7 @@ enum Routes {
 }
 
 GoRouter goRouter() {
-  return GoRouter(initialLocation: "/style_guide", routes: [
+  return GoRouter(initialLocation: "/", routes: [
     GoRoute(
       path: "/",
       name: Routes.Home.name,

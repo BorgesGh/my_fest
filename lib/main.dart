@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:my_fest/data/repositories/local/database_helper.dart';
 import 'package:my_fest/router.dart';
 import 'package:my_fest/ui/style/pallete.dart';
 
@@ -10,6 +11,8 @@ void main() {
     final license = await rootBundle.loadString('/assets/fonts/OFL.txt');
     yield LicenseEntryWithLineBreaks(['google_fonts'], license);
   });
+
+  DatabaseHelper().database;
 
   runApp(const MyApp());
 }

@@ -1,3 +1,0 @@
-//list alimentos 
-//festa
-//comprado?

@@ -2,11 +2,13 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:my_fest/data/services/local/database_helper.dart';
+import 'package:my_fest/data/persistence/local/database_helper.dart';
 import 'package:my_fest/router.dart';
 import 'package:my_fest/ui/style/pallete.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
   LicenseRegistry.addLicense(() async* {
     final license = await rootBundle.loadString('/assets/fonts/OFL.txt');
     yield LicenseEntryWithLineBreaks(['google_fonts'], license);

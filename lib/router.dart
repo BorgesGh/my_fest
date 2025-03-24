@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_fest/ui/pages/form_party_page.dart';
+import 'package:my_fest/ui/pages/form_product_page.dart';
 import 'package:my_fest/ui/pages/home_page.dart';
 import 'package:my_fest/utils/style_guide.dart';
 
@@ -11,7 +12,7 @@ enum Routes {
 }
 
 GoRouter goRouter() {
-  return GoRouter(initialLocation: "/", routes: [
+  return GoRouter(initialLocation: "/form_product", routes: [
     GoRoute(
       path: "/",
       name: Routes.Home.name,
@@ -30,6 +31,12 @@ GoRouter goRouter() {
         path: "/form_party",
         builder: (context, state) {
           return const FormPartyPage();
+        }),
+    GoRoute(
+        name: Routes.FormProduct.name,
+        path: "/form_product",
+        builder: (context, state) {
+          return const FormProductPage();
         }),
     GoRoute(
       path: "/style_guide",

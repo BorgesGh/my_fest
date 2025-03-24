@@ -1,18 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:my_fest/model/party.dart';
 import 'package:my_fest/ui/style/pallete.dart';
 import 'package:my_fest/ui/widgets/fest_button.dart';
 
 // ignore: must_be_immutable
 class PartyTile extends StatelessWidget {
-  String title;
-  DateTime date;
+  final Party party;
   Function()? onPressed;
-  PartyTile(
-      {super.key,
-      required this.title,
-      required this.date,
-      required this.onPressed});
+  PartyTile({super.key, required this.party, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +37,7 @@ class PartyTile extends StatelessWidget {
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.40,
                 child: Text(
-                  title,
+                  party.name,
                   style: const TextStyle(
                     overflow: TextOverflow.ellipsis,
                     fontSize: 20,
@@ -50,7 +46,7 @@ class PartyTile extends StatelessWidget {
                 ),
               ),
               Text(
-                DateFormat('dd/MM/yyyy').format(date),
+                DateFormat('dd/MM/yyyy').format(party.date),
                 style: const TextStyle(
                     overflow: TextOverflow.ellipsis,
                     fontSize: 18,

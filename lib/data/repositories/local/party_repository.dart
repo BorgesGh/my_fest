@@ -1,4 +1,4 @@
-import 'package:my_fest/data/services/local/dao/party_dao.dart';
+import 'package:my_fest/data/persistence/local/dao/party_dao.dart';
 import 'package:my_fest/model/party.dart';
 import 'package:my_fest/utils/result.dart';
 

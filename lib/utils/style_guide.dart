@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_fest/ui/style/pallete.dart';
 import 'package:my_fest/ui/widgets/action_button.dart';
@@ -19,17 +20,16 @@ class _StyleGuideState extends State<StyleGuide> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Guia de Estilo"),
-        backgroundColor: Pallete.primaryColor[200],
-      ),
-      drawer: const MenuDrawer(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-      floatingActionButton: ActionButton(
-        content: "Nova Festa +",
-        onPressed: () {},
-      ),
-      body: Container(margin: const EdgeInsets.all(10), child: GridProduct()),
-    );
+        appBar: AppBar(
+          title: const Text("Guia de Estilo"),
+          backgroundColor: Pallete.primaryColor[200],
+        ),
+        drawer: const MenuDrawer(),
+        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+        floatingActionButton: ActionButton(
+          content: "Nova Festa +",
+          onPressed: () {},
+        ),
+        body: Container());
   }
 }

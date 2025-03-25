@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:my_fest/router.dart';
 import 'package:my_fest/ui/style/pallete.dart';
 
 class MenuDrawer extends StatelessWidget {
@@ -31,7 +33,7 @@ class MenuDrawer extends StatelessWidget {
           ),
           ListTile(
             title: const Text(
-              'Insumos',
+              'Produtos',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -42,7 +44,7 @@ class MenuDrawer extends StatelessWidget {
               color: Pallete.primaryColor,
             ),
             onTap: () {
-              Navigator.pop(context);
+              context.pushNamed(Routes.ProductList.name);
             },
           ),
         ],

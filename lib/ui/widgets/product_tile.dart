@@ -8,11 +8,15 @@ class ProductTile extends StatelessWidget {
       {super.key,
       required this.nomeProduto,
       required this.unidadeDeMedida,
-      required this.quantidadePorPessoa});
+      required this.quantidadePorPessoa,
+      required this.onDelete,
+      required this.onEdit});
 
   String nomeProduto;
   String unidadeDeMedida;
   String quantidadePorPessoa;
+  Function() onDelete;
+  Function() onEdit;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +26,9 @@ class ProductTile extends StatelessWidget {
         children: [
           SlidableAction(
             // An action can be bigger than the others.
-            onPressed: (_) {},
+            onPressed: (_) {
+              onEdit();
+            },
             backgroundColor: Pallete.yellowColor[500]!,
             foregroundColor: Colors.white,
             icon: Icons.edit,
@@ -30,7 +36,9 @@ class ProductTile extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
           ),
           SlidableAction(
-            onPressed: (_) {},
+            onPressed: (_) {
+              onDelete();
+            },
             backgroundColor: Colors.red,
             foregroundColor: Colors.white,
             icon: Icons.delete,

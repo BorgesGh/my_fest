@@ -1,7 +1,7 @@
 abstract class MyObject {
   int? id;
 
-  MyObject();
+  MyObject({int? id});
 
   Map<String, dynamic> toJson();
   MyObject.fromJson(Map<String, dynamic> json) : id = json['id'];

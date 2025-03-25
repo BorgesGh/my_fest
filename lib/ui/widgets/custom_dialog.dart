@@ -67,10 +67,6 @@ class CustomDialog extends StatelessWidget {
           child: const Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(
-                Icons.cancel,
-                color: Colors.white,
-              ),
               Text(
                 'Cancelar',
                 style: TextStyle(

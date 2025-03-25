@@ -16,7 +16,7 @@ class WordContainer extends StatelessWidget {
       height: 100,
       child: Center(
         child: Text(
-          name[0],
+          name[0].toUpperCase(),
           style: const TextStyle(
             fontSize: 70,
             fontWeight: FontWeight.bold,

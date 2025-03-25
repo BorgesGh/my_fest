@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:my_fest/data/repositories/local/party_repository.dart';
 import 'package:my_fest/model/party.dart';
 import 'package:my_fest/router.dart';
-import 'package:my_fest/ui/controller/blocs/home_bloc.dart';
+import 'package:my_fest/ui/controller/home_page/home_bloc.dart';
 import 'package:my_fest/ui/style/pallete.dart';
 import 'package:my_fest/ui/widgets/action_button.dart';
 import 'package:my_fest/ui/widgets/menu_drawer.dart';

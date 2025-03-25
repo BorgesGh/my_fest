@@ -6,10 +6,13 @@ class Product extends MyObject {
   late double amountPerPerson;
 
   Product(
-      {required this.name,
+      {int? id,
+      required this.name,
       required this.unitOfMeasurement,
       required this.amountPerPerson})
-      : super.fromJson({});
+      : super.fromJson({}) {
+    this.id = id;
+  }
 
   Product.fromJson(Map<String, dynamic> json) : super.fromJson(json) {
     name = json['name'];

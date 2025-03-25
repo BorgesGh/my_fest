@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:my_fest/model/product.dart';
 
 abstract class FormProductEvent extends Equatable {
   const FormProductEvent();
@@ -46,4 +47,29 @@ class SubmitProduct extends FormProductEvent {
     this.quantity = '',
     this.isValid = false,
   });
+}
+
+class EditProduct extends FormProductEvent {
+  final int id;
+  final String name;
+  final String unit;
+  final String quantity;
+  final bool isValid;
+
+  const EditProduct({
+    required this.id,
+    required this.name,
+    required this.unit,
+    required this.quantity,
+    required this.isValid,
+  });
+}
+
+class InitialEditProduct extends FormProductEvent {
+  final Product product;
+
+  const InitialEditProduct({required this.product});
+
+  @override
+  List<Object> get props => [product];
 }

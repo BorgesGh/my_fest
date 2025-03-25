@@ -13,7 +13,6 @@ class FormProductBloc extends Bloc<FormProductEvent, FormProductState> {
     repository = ProductRepository();
     on<NameChanged>((event, emit) {
       final error = _validateName(event.name);
-      print(error);
       emit(state.copyWith(
         name: event.name,
         nameError: error,
@@ -42,6 +41,30 @@ class FormProductBloc extends Bloc<FormProductEvent, FormProductState> {
     on<SubmitProduct>((event, emit) async {
       final response = await repository.saveProduct(
         Product(
+            name: event.name,
+            unitOfMeasurement: event.unit,
+            amountPerPerson: double.parse(event.quantity)),
+      );
+      if (response.success) {
+        emit(SuccessFormProductState(result: response));
+      } else {
+        emit(ErrorFormProductState(result: response));
+      }
+    });
+
+    on<InitialEditProduct>((event, emit) {
+      emit(state.copyWith(
+        name: event.product.name,
+        unit: event.product.unitOfMeasurement,
+        quantity: event.product.amountPerPerson.toString(),
+        isValid: true,
+      ));
+    });
+
+    on<EditProduct>((event, emit) async {
+      final response = await repository.updateProduct(
+        Product(
+            id: event.id,
             name: event.name,
             unitOfMeasurement: event.unit,
             amountPerPerson: double.parse(event.quantity)),

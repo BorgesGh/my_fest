@@ -2,6 +2,8 @@ import 'package:equatable/equatable.dart';
 import 'package:my_fest/utils/result.dart';
 
 abstract class FormProductState extends Equatable {
+  final bool? edit;
+
   final String name;
   final String unit;
   final String quantity;
@@ -19,6 +21,7 @@ abstract class FormProductState extends Equatable {
     this.quantityError,
     this.unitError,
     this.nameError,
+    this.edit,
   });
 
   FormProductState copyWith({

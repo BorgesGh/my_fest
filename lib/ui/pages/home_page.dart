@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:my_fest/data/repositories/local/party_repository.dart';
 import 'package:my_fest/model/party.dart';
 import 'package:my_fest/router.dart';
 import 'package:my_fest/ui/controller/home_page/home_bloc.dart';
-import 'package:my_fest/ui/style/pallete.dart';
 import 'package:my_fest/ui/widgets/action_button.dart';
 import 'package:my_fest/ui/widgets/menu_drawer.dart';
 import 'package:my_fest/ui/widgets/party_tile.dart';

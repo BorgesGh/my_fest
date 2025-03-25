@@ -8,6 +8,7 @@ class ProductListBloc extends Bloc<ProductListEvent, ProductListState> {
 
   ProductListBloc() : super(const ProductListInitial()) {
     on<ProductListLoad>(_loadProductList);
+    on<ProductListDelete>(_deleteProduct);
   }
 
   _loadProductList(
@@ -17,6 +18,18 @@ class ProductListBloc extends Bloc<ProductListEvent, ProductListState> {
 
     if (response.success) {
       emit(ProductListLoaded(response.content!));
+    } else {
+      emit(ProductListError(response));
+    }
+  }
+
+  _deleteProduct(
+      ProductListDelete event, Emitter<ProductListState> emit) async {
+    emit(const ProductListLoading());
+    final response = await _productRepository.deleteProduct(event.product);
+
+    if (response.success) {
+      add(const ProductListLoad());
     } else {
       emit(ProductListError(response));
     }
